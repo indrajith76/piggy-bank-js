@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <title>Banking system - using Javascript</title>
+</head>
+<body>
+    <main>
+        <section class="grid grid-cols-2 w-9/12 mx-auto mt-24">
+            <div class="bg-slate-700 text-center pt-14 pb-12 flex flex-col items-center">
+                <h2 class="text-5xl font-bold text-green-400 mb-14">LogIn</h2>
+                <div class="pb-14">
+                    <input id="input-email" class="w-full mb-7 h-9 rounded pl-3" type="email" placeholder="Enter your email">
+                    <input id="input-password" class="w-full mb-7 h-9 rounded pl-3" type="password" placeholder="Enter your password">
+                    <button id="login-btn" class="bg-green-500 hover:bg-green-400 w-1/4 h-8 rounded font-bold text-green-200 hover:text-green-700">LogIn</button>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center bg-green-400 text-green-600 p-5">
+                <i class="fa-solid fa-piggy-bank text-9xl mb-5"></i>
+                <h1 class="text-5xl font-bold">Piggy Bank</h1>
+            </div>
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>
