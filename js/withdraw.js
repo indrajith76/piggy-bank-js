@@ -18,5 +18,6 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const currentTotalWithdraw = newWithdrawAmount + previousWithdrawTotal;
     setElementValue('withdraw-amount', currentTotalWithdraw);
     const newTotalBalance = previousTotalBalance - newWithdrawAmount;
+    document.getElementById('withdraw-display').innerText = '00';
     setElementValue('total-balance', newTotalBalance)
 })
