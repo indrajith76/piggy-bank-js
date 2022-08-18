@@ -5,6 +5,8 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const inputPasswordField = document.getElementById('input-password');
     const inputPassword = inputPasswordField.value;
 
+    inputEmailField.value = '';
+
     if(inputEmail === 'abcd@gmail.com' && inputPassword === 'abcd1234'){
         window.location.href='bank.html'
     }
