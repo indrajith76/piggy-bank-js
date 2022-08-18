@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- custom css -->
-    <link rel="stylesheet" href="styles/style.css">
     <!-- fontawesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
     <title>Welcome to the Bank</title>
@@ -24,7 +22,7 @@
         </div>
     </header>
     <main>
-        <section class="grid grid-cols-3 gap-4 w-9/12 mx-auto">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-9/12 mx-auto">
             <div class="bg-green-400 flex items-center p-6">
                 <div>
                     <h3 class="font-medium text-2xl">Deposit Amount</h2>
@@ -53,19 +51,19 @@
                 </div>
             </div>
         </section>
-        <section class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-16">
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-9/12 mx-auto mt-16">
             <div class="bg-green-400 flex items-center p-6 pr-0">
                 <div class="w-9/12">
                     <h3 class="font-medium text-2xl mb-1">Your Deposit</h2>
                     <div class="border rounded pl-2">
-                        <h2 class="font-bold text-4xl">$<span id="diposit-display">1720</span></h2>
+                        <h2 class="font-bold text-4xl">$<span id="diposit-display">00</span></h2>
                     </div>
                     <div class="mt-5">
-                        <input class="h-8 w-full rounded pl-2 block mb-4" type="text" placeholder=" $ Amount you want to deposit">
+                        <input id="deposit-field" class="h-8 w-full rounded pl-2 block mb-4" type="text" placeholder=" $ Amount you want to deposit">
                         <button id="btn-deposit" class="border hover:border-green-700 px-4 py-1 rounded-lg text-gray-800 font-bold">Deposit</button>
                     </div>
                 </div>
-                <div class="mx-auto">
+                <div class="mx-auto hidden md:block lg:block">
                     <i class="fa-solid fa-money-bill-trend-up text-6xl"></i>
                 </div>
             </div>
@@ -80,11 +78,13 @@
                         <button class="border hover:border-green-700 px-4 py-1 rounded-lg text-gray-800 font-bold">Withdraw</button>
                     </div>
                 </div>
-                <div class="mx-auto">
+                <div class="mx-auto hidden md:block lg:block">
                     <i class="fa-solid fa-money-bill-transfer text-6xl"></i>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/deposit.js"></script>
 </body>
 </html>
