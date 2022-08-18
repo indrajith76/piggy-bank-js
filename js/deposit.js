@@ -4,6 +4,10 @@ document.getElementById('deposit-field').addEventListener('keyup',function(event
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
     const newDepositAmount = getInputValueById('deposit-field');
+    if(isNaN(newDepositAmount) || newDepositAmount < 0){
+        alert('ENTER VALID NUMBERS !');
+        return;
+    }
     const previousDepositTotal = getElementValueById('deposit-amount');
     const currentDepositAmount = newDepositAmount + previousDepositTotal;
     setElementValue('deposit-amount', currentDepositAmount);
